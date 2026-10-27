@@ -1,0 +1,23 @@
+# Dependencias instaladas con npm.
+# Son pesadas y se pueden regenerar con npm install.
+node_modules/
+
+# Archivos de entorno: pueden contener contraseñas y claves.
+.env
+.env.local
+
+# Resultados de compilación.
+dist/
+build/
+
+# Cobertura de pruebas.
+coverage/
+
+# Archivos que genera el sistema operativo.
+.DS_Store
+Thumbs.db
+
+# Registros y temporales del editor.
+*.log
+.vscode/*
+!.vscode/extensions.json
