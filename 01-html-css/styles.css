@@ -1,0 +1,74 @@
+/* ===== Variables ===== */
+/* Se declaran en :root, que representa el elemento raíz del documento.
+   Al definirlas aquí quedan disponibles en todo el archivo. */
+:root {
+  --color-fondo: #0f172a;
+  --color-texto: #e2e8f0;
+  --color-acento: #38bdf8;
+  --color-tarjeta: #1e293b;
+  --espacio: 1rem;
+  --radio: 0.5rem;
+}
+
+/* ===== Reinicio básico ===== */
+/* El selector * aplica la regla a todos los elementos. */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box hace que el ancho incluya el padding
+     y el borde. Sin esto, los elementos crecen más de lo que esperas. */
+  box-sizing: border-box;
+}
+
+/* ===== Cuerpo del documento ===== */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  padding: var(--espacio);
+}
+
+/* ===== Encabezado ===== */
+header {
+  border-bottom: 2px solid var(--color-acento);
+  padding-bottom: var(--espacio);
+  margin-bottom: calc(var(--espacio) * 2);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-acento);
+}
+
+/* ===== Secciones ===== */
+section {
+  background-color: var(--color-tarjeta);
+  padding: calc(var(--espacio) * 1.5);
+  border-radius: var(--radio);
+  margin-bottom: var(--espacio);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: var(--espacio);
+}
+
+/* ===== Lista ===== */
+ul {
+  /* list-style: none quita los puntos de la lista. */
+  list-style: none;
+}
+
+li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.15);
+}
+
+/* ===== Pie de página ===== */
+footer {
+  margin-top: calc(var(--espacio) * 2);
+  font-size: 0.875rem;
+  text-align: center;
+  color: #94a3b8;
+}
