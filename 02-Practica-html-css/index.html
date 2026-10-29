@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Configuración del documento: caracteres, adaptación a pantallas y texto para buscadores. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Disfruta café de calidad, productos gourmet y experiencias únicas en Cafetería PlazaCoffee.">
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <title>Café con propósito</title>
+    <!-- Conecta esta página con su hoja de estilos. -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- Encabezado del sitio con la marca y enlaces a las secciones principales. -->
+    <header>
+      <!-- El enlace de la marca lleva nuevamente al inicio de la página. -->
+      <a class="brand" href="#inicio" aria-label="Plaza Coffee, ir al inicio">PLAZA<span>COFFEE</span></a>
+      <!-- Cada enlace apunta al id de una sección para navegar dentro de la misma página. -->
+      <nav aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#resena">Déjanos tu reseña</a>
+      </nav>
+    </header>
+
+    <!-- Contiene el contenido principal de la página. -->
+    <main>
+      <!-- Presentación principal o hero: mensaje de bienvenida, llamada a la acción e imagen decorativa. -->
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">UN CAFECITO CON DIOS</p>
+          <h1>Un buen café.<br>Un momento para <span>disfrutar.</span></h1>
+          <p>En Plaza Coffee cada taza está hecha para compartir, hacer una pausa y disfrutar de algo especial.</p>
+          <!-- Este botón desplaza al visitante a la sección de servicios. -->
+          <a class="button-link" href="#servicios">Conoce lo que ofrecemos <span aria-hidden="true">↓</span></a>
+        </div>
+        <!-- La imagen se agrega desde CSS; role y aria-label ofrecen una descripción accesible. -->
+        <div class="hero-image" role="img" aria-label="Taza de café recién preparado"></div>
+      </section>
+
+      <!-- Servicios ofrecidos por la cafetería. -->
+      <section class="services section-shell" id="servicios">
+        <div class="section-heading">
+          <p class="eyebrow">HECHO CON CARIÑO</p>
+          <h2>Lo que tenemos para ti</h2>
+          <p>Sabores que te acompañan en cualquier momento del día.</p>
+        </div>
+        <!-- Cada artículo representa un servicio independiente. -->
+        <div class="service-grid">
+          <article class="service-card">
+            <!-- Los iconos son decorativos; aria-hidden evita que lectores de pantalla los lean. -->
+            <span class="service-icon" aria-hidden="true">☕</span>
+            <h3>Café de especialidad</h3>
+            <p>Granos seleccionados y preparados para disfrutar todo su aroma y sabor.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">♨</span>
+            <h3>Espresso y bebidas</h3>
+            <p>Desde un espresso intenso hasta tu bebida favorita, siempre recién hecha.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">✦</span>
+            <h3>Delicias gourmet</h3>
+            <p>Opciones dulces y productos sugar free para acompañar cada taza.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">♡</span>
+            <h3>Experiencias de café</h3>
+            <p>Descubre nuevas preparaciones y comparte un momento diferente.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Galería fotográfica; las descripciones alt hacen que las imágenes sean accesibles. -->
+      <section class="gallery section-shell" id="galeria">
+        <div class="section-heading">
+          <p class="eyebrow">UN VISTAZO A PLAZA</p>
+          <h2>Momentos para saborear</h2>
+          <p>Pasa el cursor sobre las fotos y descubre los pequeños detalles.</p>
+        </div>
+        <!-- figure agrupa cada foto con su texto descriptivo; loading="lazy" aplaza su carga. -->
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item-tall">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Taza de café servida sobre una mesa" loading="lazy">
+            <figcaption>Una pausa, un buen café</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Preparación artesanal de café" loading="lazy">
+            <figcaption>Preparado al momento</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Interior acogedor de una cafetería" loading="lazy">
+            <figcaption>Un lugar para compartir</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Sección para conocer la opinión del cliente y completar sus datos de contacto. -->
+      <section class="review-section section-shell" id="resena">
+        <div class="review-intro">
+          <p class="eyebrow">TU OPINIÓN NOS INSPIRA</p>
+          <h2>¿Cómo fue tu experiencia?</h2>
+          <p>Cuéntanos qué disfrutaste. Tus comentarios nos ayudan a seguir mejorando.</p>
+        </div>
+        <!-- required activa la validación básica del navegador antes de enviar el formulario. -->
+        <form class="review-form" id="review-form">
+          <div class="form-row">
+            <!-- for enlaza la etiqueta con el campo que tiene el mismo id. -->
+            <label for="name">Nombre completo</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Teléfono de contacto</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Ej. 300 123 4567" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="form-row">
+            <label for="review">Tu reseña</label>
+            <textarea id="review" name="review" rows="4" placeholder="¡Cuéntanos qué te pareció!" required></textarea>
+          </div>
+          <!-- Aviso transparente: esta página no tiene un servidor donde guardar o enviar datos. -->
+          <p class="form-note">Este formulario es una demostración y no envía ni almacena tus datos.</p>
+          <button class="submit-button" type="submit">Enviar reseña <span aria-hidden="true">→</span></button>
+          <!-- La confirmación se anuncia también a tecnologías de asistencia mediante role="status". -->
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Pie de página con la marca y una breve frase de cierre. -->
+    <footer>
+      <a class="brand footer-brand" href="#inicio">PLAZA<span>COFFEE</span></a>
+      <p>Un cafecito con Dios. Hecho para disfrutar.</p>
+      <p class="copyright">© 2026 Plaza Coffee</p>
+    </footer>
+
+    <!-- Interacción demostrativa: muestra una confirmación y limpia los campos, sin transmitir información. -->
+    <script>
+      // Busca el formulario y el espacio donde se mostrará el mensaje.
+      const reviewForm = document.querySelector("#review-form");
+      const formFeedback = document.querySelector("#form-feedback");
+
+      // Al enviar, cancela la navegación predeterminada, informa al usuario y reinicia el formulario.
+      reviewForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formFeedback.textContent = "¡Gracias por compartir tu opinión! Recuerda que esta demostración no envía tus datos.";
+        reviewForm.reset();
+      });
+    </script>
+  </body>
+</html>
